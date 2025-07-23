@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "react-router-dom": "^7.7.0",
+    "unicornstudio-react": "^1.4.27"
+  }
+}
