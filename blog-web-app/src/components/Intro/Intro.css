@@ -1,0 +1,124 @@
+body {
+  background: linear-gradient(rgb(199, 160, 166), rgb(159, 69, 93));
+}
+.intro-main-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 100px;
+}
+.intro-img {
+  animation: imageAnimation 4s ease-in-out infinite;
+}
+@keyframes imageAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.text-div {
+  display: flex;
+  flex-direction: column;
+}
+.welcome-line-div {
+  background-color: pink;
+  width: 140px;
+  border-radius: 8px;
+  height: 20px;
+  color: rgb(67, 10, 19);
+  font-family: "fantasy";
+  font-weight: bold;
+  padding: 4px;
+}
+.main-title {
+  font-size: 55px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin-bottom: 0;
+}
+.span-text {
+  background: linear-gradient(to right, #ff6a00, #ee0979);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.desc-text {
+  font-size: 17px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: #630715;
+}
+.button-div {
+  display: flex;
+  flex-direction: row;
+  gap: 35px;
+}
+.login-button {
+  cursor: pointer;
+  border: none;
+  font-size: 16px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background: linear-gradient(to right, rgb(139, 10, 72), rgb(195, 84, 127));
+  width: 150px;
+  height: 35px;
+  border-radius: 8px;
+  color: white;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.subs-button {
+  cursor: pointer;
+  border: none;
+  font-size: 16px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: rgb(201, 140, 151);
+  width: 150px;
+  height: 35px;
+  border-radius: 8px;
+  border: solid rgb(204, 81, 102) 2px;
+  color: rgb(123, 20, 65);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.features-div {
+  display: flex;
+  flex-direction: row;
+  margin-top: 30px;
+}
+.heart-div {
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+  margin-right: 25px;
+}
+.heart-div > p {
+  color: #630715;
+}
+.heart-shape {
+  margin-top: 17px;
+  color: #540729;
+}
+.star-div {
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+}
+.star-div > p {
+  color: #630715;
+}
+.star-shape {
+  margin-top: 17px;
+  color: #540729;
+}
