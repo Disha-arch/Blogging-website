@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Login.css";
 import { CiMail } from "react-icons/ci";
 import { CiLock } from "react-icons/ci";
@@ -7,6 +8,8 @@ import { auth, googleProvider } from "../../config/firebase-config";
 import { createUserWithEmailAndPassword, signInWithPopup } from "firebase/auth";
 
 const Login = () => {
+  const navigate = useNavigate();
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -73,7 +76,13 @@ const Login = () => {
             Forgot Password?
           </h4>
         </div>
-        <button className="signIn-button" onClick={handleSignIn}>
+        <button
+          className="signIn-button"
+          onClick={() => {
+            handleSignIn();
+            navigate("/home");
+          }}
+        >
           Sign In
         </button>
         <div
@@ -89,7 +98,10 @@ const Login = () => {
         </div>
         <button
           className="google-signIn-button"
-          onClick={handleSignInWithGoogle}
+          onClick={() => {
+            handleSignInWithGoogle();
+            navigate("/home");
+          }}
         >
           <FaGoogle
             size={16}
