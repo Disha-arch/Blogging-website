@@ -1,12 +1,12 @@
-body {
-  background: linear-gradient(rgb(199, 160, 166), rgb(159, 69, 93));
-}
 .intro-main-div {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
   gap: 100px;
+  min-width: 100vw;
+  background: linear-gradient(rgb(199, 160, 166), rgb(159, 69, 93));
+  min-height: 100vh;
 }
 .intro-img {
   animation: imageAnimation 4s ease-in-out infinite;
@@ -25,16 +25,17 @@ body {
 .text-div {
   display: flex;
   flex-direction: column;
+  gap: 20px;
 }
 .welcome-line-div {
   background-color: pink;
-  width: 140px;
-  border-radius: 8px;
-  height: 20px;
+  width: 155px;
+  border-radius: 15px;
+  height: 30px;
   color: rgb(67, 10, 19);
   font-family: "fantasy";
   font-weight: bold;
-  padding: 4px;
+  padding: 7px;
 }
 .main-title {
   font-size: 55px;
@@ -107,7 +108,7 @@ body {
   color: #630715;
 }
 .heart-shape {
-  margin-top: 17px;
+  margin-top: 2px;
   color: #540729;
 }
 .star-div {
@@ -119,6 +120,6 @@ body {
   color: #630715;
 }
 .star-shape {
-  margin-top: 17px;
+  margin-top: 2px;
   color: #540729;
 }
