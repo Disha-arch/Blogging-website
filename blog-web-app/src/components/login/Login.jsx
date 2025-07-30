@@ -1,21 +1,25 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+
 import "./Login.css";
 import { CiMail } from "react-icons/ci";
 import { CiLock } from "react-icons/ci";
 import { FaGoogle } from "react-icons/fa";
 import { auth, googleProvider } from "../../config/firebase-config";
-import { createUserWithEmailAndPassword, signInWithPopup } from "firebase/auth";
+import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
 
 const Login = () => {
-  const navigate = useNavigate();
-
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const handleSignIn = async () => {
     try {
-      await createUserWithEmailAndPassword(auth, email, password);
+      const userCredential = await signInWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
+      const user = userCredential.user;
+      localStorage.setItem("username", user.displayName || user.email);
     } catch (err) {
       console.error(err);
     }
@@ -80,10 +84,17 @@ const Login = () => {
           className="signIn-button"
           onClick={() => {
             handleSignIn();
-            navigate("/home");
           }}
         >
-          Sign In
+          Sign Up
+        </button>
+        <button
+          className="signIn-button"
+          onClick={() => {
+            handleSignIn();
+          }}
+        >
+          Log In
         </button>
         <div
           style={{
@@ -100,7 +111,6 @@ const Login = () => {
           className="google-signIn-button"
           onClick={() => {
             handleSignInWithGoogle();
-            navigate("/home");
           }}
         >
           <FaGoogle
