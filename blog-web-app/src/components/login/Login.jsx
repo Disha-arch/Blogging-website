@@ -5,13 +5,17 @@ import { CiMail } from "react-icons/ci";
 import { CiLock } from "react-icons/ci";
 import { FaGoogle } from "react-icons/fa";
 import { auth, googleProvider } from "../../config/firebase-config";
-import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
+import {
+  signInWithEmailAndPassword,
+  createUserWithEmailAndPassword,
+  signInWithPopup,
+} from "firebase/auth";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleSignIn = async () => {
+  const handleLogIn = async () => {
     try {
       const userCredential = await signInWithEmailAndPassword(
         auth,
@@ -20,6 +24,13 @@ const Login = () => {
       );
       const user = userCredential.user;
       localStorage.setItem("username", user.displayName || user.email);
+    } catch (err) {
+      console.error(err);
+    }
+  };
+  const handleSignIn = async () => {
+    try {
+      await createUserWithEmailAndPassword(auth, email, password);
     } catch (err) {
       console.error(err);
     }
@@ -91,7 +102,7 @@ const Login = () => {
         <button
           className="signIn-button"
           onClick={() => {
-            handleSignIn();
+            handleLogIn();
           }}
         >
           Log In
