@@ -4,9 +4,73 @@
   justify-content: center;
   align-items: center;
   gap: 55px;
-  background-color: rgb(212, 179, 185);
+  background-color: rgb(240, 218, 222);
+  padding: 25px;
 }
 .navbar-logo-div {
   display: flex;
   flex-direction: row;
+  gap: 15px;
+}
+.book-logo {
+  margin-top: 2px;
+  color: rgb(173, 60, 60);
+}
+.navbar-logo-div > h2 {
+  background: linear-gradient(rgb(192, 102, 117), rgb(156, 32, 32));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 30px;
+}
+.home-navlink {
+  font-size: 18px;
+  color: #540729;
+  font-family: "Arial Narrow Bold", sans-serif;
+  margin-right: 13px;
+}
+.discover-navlink {
+  font-size: 18px;
+  font-weight: 200;
+  font-family: "Arial Narrow Bold", sans-serif;
+  margin-right: 13px;
+}
+.search-div {
+  position: relative;
+}
+.search-icon {
+  position: absolute;
+  top: 8px;
+  left: 12px;
+  pointer-events: none;
+}
+.search-input-field {
+  padding: 8px 8px 8px 35px;
+  border: 1px solid rgb(210, 71, 94);
+  border-radius: 5px;
+  width: 270px;
+  font-size: 14px;
+}
+.write-button-div {
+  position: relative;
+}
+.write-icon {
+  position: absolute;
+  top: 8px;
+  left: 5px;
+}
+.write-button {
+  border: none;
+  padding: 8px;
+  width: 90px;
+  color: rgb(156, 32, 32);
+  font-weight: 550;
+  border-radius: 15px;
+  background: linear-gradient(rgb(229, 146, 160), rgb(196, 99, 99));
+}
+.welcome-msg {
+  color: black;
+  font-size: 17px;
+}
+.welcome-msg > span {
+  color: rgb(135, 19, 38);
 }
