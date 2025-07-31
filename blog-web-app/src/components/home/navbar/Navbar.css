@@ -1,0 +1,12 @@
+.main-navbar-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 55px;
+  background-color: rgb(212, 179, 185);
+}
+.navbar-logo-div {
+  display: flex;
+  flex-direction: row;
+}
