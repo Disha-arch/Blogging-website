@@ -22,14 +22,27 @@
   -webkit-text-fill-color: transparent;
   font-size: 30px;
 }
+.home-icon-link-div {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+}
 .home-navlink {
-  font-size: 18px;
+  font-size: 16px;
   color: #540729;
   font-family: "Arial Narrow Bold", sans-serif;
   margin-right: 13px;
 }
-.discover-navlink {
-  font-size: 18px;
+.myblogs-icon-link-div {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+}
+.myblogs-icon {
+  margin-top: 2px;
+}
+.myblogs-navlink {
+  font-size: 16px;
   font-weight: 200;
   font-family: "Arial Narrow Bold", sans-serif;
   margin-right: 13px;
