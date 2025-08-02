@@ -1,0 +1,35 @@
+.hero-title-icon-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+.hero-title-icon-div > h1 {
+  font-size: 50px;
+  background: url("bg_img_hero3.jfif") center;
+  background-size: cover;
+  background-clip: text;
+  color: transparent;
+  animation: animate 10s linear infinite;
+}
+@keyframes animate {
+  to {
+    background-position-x: -200px;
+  }
+}
+.shine-icon {
+  color: rgb(198, 148, 22);
+}
+.hero-welcome-para-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+.hero-welcome-para-div > p {
+  font-size: 25px;
+  color: rgb(188, 118, 118);
+}

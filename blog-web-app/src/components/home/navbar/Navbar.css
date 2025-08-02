@@ -78,13 +78,14 @@
   left: 5px;
 }
 .write-button {
+  cursor: pointer;
   border: none;
   padding: 8px;
   width: 90px;
-  color: rgb(156, 32, 32);
+  color: #851646;
   font-weight: 550;
-  border-radius: 15px;
-  background: linear-gradient(rgb(229, 146, 160), rgb(196, 99, 99));
+  background-color: rgb(240, 218, 222);
+  margin-left: 8px;
 }
 .welcome-msg {
   color: black;
@@ -92,4 +93,28 @@
 }
 .welcome-msg > span {
   color: rgb(135, 19, 38);
+}
+.logout-button-icon-div {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 102px;
+}
+.logout-icon {
+  position: absolute;
+  left: 0;
+}
+.logout-button-icon-div > button {
+  cursor: pointer;
+  width: 95px;
+  height: 30px;
+  padding: 5px;
+  border: none;
+  background-color: rgb(240, 218, 222);
+  color: rgb(89, 5, 5);
+  font-weight: 500;
+  font-size: 13px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }

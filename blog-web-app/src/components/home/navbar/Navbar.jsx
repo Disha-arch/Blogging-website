@@ -3,19 +3,12 @@ import "./Navbar.css";
 import { NavLink } from "react-router-dom";
 import { MdMenuBook } from "react-icons/md";
 import { IoSearchOutline } from "react-icons/io5";
-import { FaPlus } from "react-icons/fa6";
 import { MdOutlineHome } from "react-icons/md";
 import { GrNotes } from "react-icons/gr";
+import { IoLogOutOutline } from "react-icons/io5";
+import { FaPenNib } from "react-icons/fa6";
 
 const Navbar = () => {
-  const [username, setUsername] = useState("");
-
-  useEffect(() => {
-    const storedName = localStorage.getItem("username");
-    if (storedName) {
-      setUsername(storedName);
-    }
-  }, []);
   return (
     <div className="main-navbar-div">
       <div className="navbar-logo-div">
@@ -50,6 +43,10 @@ const Navbar = () => {
           My Blogs
         </NavLink>
       </div>
+      <div className="write-button-div">
+        <FaPenNib size={14} color="#71143cff" className="write-icon" />
+        <button className="write-button">Write</button>
+      </div>
       <div className="search-div">
         <IoSearchOutline size={16} color="#71143cff" className="search-icon" />
         <input
@@ -58,13 +55,10 @@ const Navbar = () => {
           className="search-input-field"
         ></input>
       </div>
-      <div className="write-button-div">
-        <FaPlus size={14} color="#71143cff" className="write-icon" />
-        <button className="write-button">Write</button>
+      <div className="logout-button-icon-div">
+        <IoLogOutOutline className="logout-icon" />
+        <button>LogOut</button>
       </div>
-      <h4 className="welcome-msg">
-        Welcome , <span>{username}</span>
-      </h4>
     </div>
   );
 };
