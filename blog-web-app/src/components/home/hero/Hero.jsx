@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Hero.css";
 import { TfiShine } from "react-icons/tfi";
+import FeaturedPost from "./featuredPost/FeaturedPost";
 
 const Hero = () => {
   const [username, setUsername] = useState("");
@@ -24,6 +25,7 @@ const Hero = () => {
           awaits.
         </p>
       </div>
+      <FeaturedPost />
     </div>
   );
 };
