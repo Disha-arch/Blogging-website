@@ -1,0 +1,26 @@
+.recent-post-view-all-button-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 35px;
+  padding: 32px;
+}
+.recent-post-view-all-button-div > h4 {
+  font-size: 30px;
+  font-weight: 700;
+  color: rgb(91, 7, 46);
+  margin-left: 29px;
+}
+.recent-post-view-all-button-div > button {
+  margin-right: 29px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  color: rgb(133, 9, 48);
+  border-radius: 19px;
+  font-size: 15px;
+  border: 1px solid rgb(181, 62, 82);
+  background-color: rgb(242, 216, 220);
+  cursor: pointer;
+}
