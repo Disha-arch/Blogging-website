@@ -1,0 +1,81 @@
+.featured-image-main-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: yellow;
+  margin-top: 60px;
+  height: 380px;
+  gap: 70px;
+}
+.image-icons-main-div {
+  width: 600px;
+  height: 379px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  gap: 10px;
+}
+
+.featured-image {
+  width: 450px;
+  border-radius: 20px;
+}
+.eye-heart-icon-div {
+  display: flex;
+  flex-direction: row;
+  gap: 18px;
+  margin-right: 0;
+  margin-left: 300px;
+  width: 300px;
+  height: 50px;
+  padding-left: 92px;
+}
+.eye-icon-div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+.heart-icon-div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+.main-text-div {
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+  background-color: pink;
+  height: 280px;
+  margin-left: 10px;
+}
+.fp-title-para-div {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-left: 30px;
+}
+.featured-post-text-div {
+  margin-left: 30px;
+  margin-top: 10px;
+  color: maroon;
+  background-color: rgb(238, 144, 160);
+  width: 99px;
+  padding: 6px;
+  border-radius: 15px;
+}
+.date-read-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 30px;
+}
+.calendar-icon-date-div {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
