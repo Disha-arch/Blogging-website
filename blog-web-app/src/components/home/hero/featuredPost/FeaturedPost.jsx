@@ -1,9 +1,11 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./FeaturedPost.css";
 import { IoCalendarClearOutline } from "react-icons/io5";
 import { FaRegEye } from "react-icons/fa6";
 import { FaRegHeart } from "react-icons/fa";
 const FeaturedPost = () => {
+  const navigate = useNavigate();
   return (
     <div>
       <div className="featured-image-main-div">
@@ -19,20 +21,25 @@ const FeaturedPost = () => {
           </div>
           <div className="date-read-div">
             <div className="calendar-icon-date-div">
-              <IoCalendarClearOutlines />
+              <IoCalendarClearOutline color="rgb(169, 99, 111)" />
               <p>March 15 , 2025</p>
             </div>
-            <button>Read More</button>
+            <button
+              className="read-more-button"
+              onClick={() => navigate("/featured-post")}
+            >
+              Read More
+            </button>
           </div>
         </div>
         <div className="image-icons-main-div">
           <div className="eye-heart-icon-div">
             <div className="eye-icon-div">
-              <FaRegEye />
+              <FaRegEye color="rgb(169, 99, 111)" cursor={"pointer"} />
               <h5>234</h5>
             </div>
             <div className="heart-icon-div">
-              <FaRegHeart />
+              <FaRegHeart color="rgb(169, 99, 111)" cursor={"pointer"} />
               <h5>18</h5>
             </div>
           </div>

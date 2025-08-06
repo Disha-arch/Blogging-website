@@ -3,7 +3,9 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-color: yellow;
+  background-color: white;
+  border-radius: 20px;
+  margin: 20px;
   margin-top: 60px;
   height: 380px;
   gap: 70px;
@@ -29,9 +31,11 @@
   gap: 18px;
   margin-right: 0;
   margin-left: 300px;
+  margin-right: 42px;
   width: 300px;
   height: 50px;
   padding-left: 92px;
+  margin-top: 19px;
 }
 .eye-icon-div {
   display: flex;
@@ -39,17 +43,22 @@
   align-items: center;
   gap: 8px;
 }
+.eye-icon-div > h5 {
+  color: rgb(169, 99, 111);
+}
 .heart-icon-div {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 8px;
 }
+.heart-icon-div > h5 {
+  color: rgb(169, 99, 111);
+}
 .main-text-div {
   display: flex;
   flex-direction: column;
   gap: 45px;
-  background-color: pink;
   height: 280px;
   margin-left: 10px;
 }
@@ -58,6 +67,17 @@
   flex-direction: column;
   gap: 15px;
   margin-left: 30px;
+}
+.fp-title-para-div > h2 {
+  font-size: 28px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: rgba(95, 6, 22, 0.811);
+}
+.fp-title-para-div > p {
+  font-size: 18px;
+  line-height: 26px;
+  color: rgb(169, 99, 111);
 }
 .featured-post-text-div {
   margin-left: 30px;
@@ -78,4 +98,18 @@
   display: flex;
   flex-direction: row;
   gap: 8px;
+  padding: 7px;
+}
+.calendar-icon-date-div > p {
+  color: rgb(169, 99, 111);
+}
+.read-more-button {
+  padding: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(150, 9, 79, 0.811);
+  background-color: pink;
+  border: none;
+  border-radius: 17px;
+  cursor: pointer;
 }
