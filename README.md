@@ -21,22 +21,6 @@ A fully responsive and dynamic blogging platform designed to allow users to read
 * **State Management:** React useState/useEffect
 * **Backend:** FireBase - Authorization, database
 
----
-
-## 📁 Folder Structure
-
-```
-Blogging-website/
-├── public/
-│   └── index.html
-├── src/
-│   ├── components/         # Reusable UI components
-│   ├── pages/              # Blog-related pages
-│   ├── App.js              # Root component with routes
-│   └── index.js            # React DOM rendering
-├── package.json
-└── README.md
-```
 
 ---
 
