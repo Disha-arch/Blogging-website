@@ -24,3 +24,77 @@
   background-color: rgb(242, 216, 220);
   cursor: pointer;
 }
+
+.recent-post-indiv-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 103px;
+  margin-top: 23px;
+  width: 400px;
+  padding: 12px;
+  background: linear-gradient(rgb(223, 176, 184), rgb(211, 144, 144));
+  box-shadow: 0 0 10px rgba(143, 58, 58, 0.05);
+  border-radius: 18px;
+}
+.recent-post-category-div {
+  color: rgb(169, 46, 67);
+  background-color: pink;
+  width: 96px;
+  padding-left: 8px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  border-radius: 16px;
+}
+.recent-post-title {
+  margin-top: 7px;
+  margin-left: 5px;
+  color: rgb(90, 6, 6);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.recent-post-content {
+  margin-top: 10px;
+  margin-left: 5px;
+  color: rgb(108, 44, 44);
+}
+.recent-post-date-div {
+  display: flex;
+  gap: 7px;
+  margin-top: 20px;
+  margin-left: 5px;
+}
+.recent-post-date-div > P {
+  color: rgb(108, 44, 44);
+}
+.like-view-comm-read-div {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 23px;
+}
+.like-view-comm-div {
+  display: flex;
+  gap: 12px;
+}
+.views-div,
+.likes-div,
+.comments-div {
+  display: flex;
+  gap: 5px;
+  cursor: pointer;
+}
+.views-div,
+.likes-div,
+.comments-div > p {
+  color: rgb(108, 44, 44);
+}
+.read-div {
+  color: rgb(97, 13, 13);
+  cursor: pointer;
+}
+.all-recent-posts-div {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 50px;
+  margin-top: 20px;
+  padding: 0 20px;
+}
