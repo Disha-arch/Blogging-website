@@ -19,8 +19,7 @@ A fully responsive and dynamic blogging platform designed to allow users to read
 * **Frontend:** React.js, HTML5, CSS3
 * **Routing:** React Router
 * **State Management:** React useState/useEffect
-* **Backend:** (Add if applicable – Node.js, Express.js, MongoDB, etc.)
-* **Hosting:** (Netlify, Vercel, Render, etc.)
+* **Backend:** FireBase - Authorization, database
 
 ---
 
