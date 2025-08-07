@@ -65,11 +65,6 @@ The app will run on `http://localhost:3000`.
 
 ---
 
-## 🔗 Live Demo
-
-> Add your deployed link here (e.g., Vercel/Netlify)
-
----
 
 ## 📸 Screenshots
 
