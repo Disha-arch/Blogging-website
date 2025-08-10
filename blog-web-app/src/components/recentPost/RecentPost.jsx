@@ -6,6 +6,7 @@ import { CiHeart } from "react-icons/ci";
 import { FaRegComment } from "react-icons/fa";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../../config/firebase-config";
+import { FaPlus } from "react-icons/fa6";
 
 const RecentPost = () => {
   const [posts, setPosts] = useState([]);
@@ -19,7 +20,7 @@ const RecentPost = () => {
         ...doc.data(),
       }));
       setPosts(postList);
-      console.log("fetched posts :", postList);
+      // console.log("fetched posts :", postList);
     };
     fetchPosts();
   }, []);
@@ -30,37 +31,38 @@ const RecentPost = () => {
         <button>View All</button>
       </div>
       <div className="all-recent-posts-div">
-        <div className="recent-post-indiv-div">
-          {posts.map((post) => (
-            <div key={post.id}>
-              <div className="recent-post-category-div">{post.category}</div>
-              <h3 className="recent-post-title">{post.title}</h3>
-              <p className="recent-post-content">{post.content}</p>
-              <div className="recent-post-date-div">
-                <IoCalendarClearOutline color="rgb(108, 44, 44)" />
-                <p>{new Date(post.date.seconds * 1000).toLocaleDateString()}</p>
-              </div>
-              <div className="like-view-comm-read-div">
-                <div className="like-view-comm-div">
-                  <div className="views-div">
-                    <IoEyeOutline color="rgb(108, 44, 44)" />
-                    <p>{post.views}</p>
-                  </div>
-                  <div className="likes-div">
-                    <CiHeart color="rgb(108, 44, 44)" />
-                    <p>{post.likes}</p>
-                  </div>
-                  <div className="comments-div">
-                    <FaRegComment color="rgb(108, 44, 44)" />
-                    <p>{post.comments}</p>
-                  </div>
-                </div>
-                <div className="read-div">Read</div>
-              </div>
+        {posts.map((post) => (
+          <div className="recent-post-indiv-div" key={post.id}>
+            <div className="recent-post-category-div">{post.category}</div>
+            <h3 className="recent-post-title">{post.title}</h3>
+            <p className="recent-post-content">{post.content}</p>
+            <div className="recent-post-date-div">
+              <IoCalendarClearOutline color="rgb(108, 44, 44)" />
+              <p>{new Date(post.date.seconds * 1000).toLocaleDateString()}</p>
             </div>
-          ))}
-        </div>
+            <div className="like-view-comm-read-div">
+              <div className="like-view-comm-div">
+                <div className="views-div">
+                  <IoEyeOutline color="rgb(108, 44, 44)" />
+                  <p>{post.views}</p>
+                </div>
+                <div className="likes-div">
+                  <CiHeart color="rgb(108, 44, 44)" />
+                  <p>{post.likes}</p>
+                </div>
+                <div className="comments-div">
+                  <FaRegComment color="rgb(108, 44, 44)" />
+                  <p>{post.comments}</p>
+                </div>
+              </div>
+              <div className="read-div">Read</div>
+            </div>
+          </div>
+        ))}
       </div>
+      <button className="floating-plus-button">
+        <FaPlus />
+      </button>
     </div>
   );
 };
