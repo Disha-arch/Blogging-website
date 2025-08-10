@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./RecentPost.css";
 import { IoCalendarClearOutline } from "react-icons/io5";
 import { IoEyeOutline } from "react-icons/io5";
@@ -9,6 +10,8 @@ import { db } from "../../config/firebase-config";
 import { FaPlus } from "react-icons/fa6";
 
 const RecentPost = () => {
+  const navigate = useNavigate();
+
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
@@ -60,7 +63,10 @@ const RecentPost = () => {
           </div>
         ))}
       </div>
-      <button className="floating-plus-button">
+      <button
+        className="floating-plus-button"
+        onClick={() => navigate("/create-post")}
+      >
         <FaPlus />
       </button>
     </div>

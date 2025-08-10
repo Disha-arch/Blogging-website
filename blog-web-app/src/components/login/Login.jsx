@@ -4,6 +4,7 @@ import "./Login.css";
 import { CiMail } from "react-icons/ci";
 import { CiLock } from "react-icons/ci";
 import { FaGoogle } from "react-icons/fa";
+import { FaUser } from "react-icons/fa";
 import { auth, googleProvider } from "../../config/firebase-config";
 import {
   signInWithEmailAndPassword,
@@ -58,6 +59,16 @@ const Login = () => {
           <p>Sign in to continue your blogging journey</p>
         </div>
         <div className="email-pass-div">
+          <label className="first-name">First Name</label>
+          <div>
+            <FaUser />
+            <input type="text" placeholder="your first name"></input>
+          </div>
+          <label className="first-name">Last Name</label>
+          <div>
+            <FaUser />
+            <input type="text" placeholder="your last name"></input>
+          </div>
           <label className="email-label">Email Address</label>
           <div className="email-div">
             <CiMail size={24} color="rgb(131, 18, 37)" />
