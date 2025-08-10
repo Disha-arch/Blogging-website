@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Navbar.css";
 import { NavLink } from "react-router-dom";
 import { MdMenuBook } from "react-icons/md";
@@ -9,6 +10,7 @@ import { IoLogOutOutline } from "react-icons/io5";
 import { FaPenNib } from "react-icons/fa6";
 
 const Navbar = () => {
+  const navigate = useNavigate();
   return (
     <div className="main-navbar-div">
       <div className="navbar-logo-div">
@@ -45,7 +47,12 @@ const Navbar = () => {
       </div>
       <div className="write-button-div">
         <FaPenNib size={14} color="#71143cff" className="write-icon" />
-        <button className="write-button">Write</button>
+        <button
+          className="write-button"
+          onClick={() => navigate("/create-post")}
+        >
+          Write
+        </button>
       </div>
       <div className="search-div">
         <IoSearchOutline size={16} color="#71143cff" className="search-icon" />

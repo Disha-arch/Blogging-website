@@ -17,7 +17,7 @@ const Hero = () => {
     <div className="main-hero-div">
       <div className="hero-welcome-para-div">
         <div className="hero-title-icon-div">
-          <h1>Welcome Back , {username} !</h1>
+          <h1>Welcome , {username} !</h1>
           <TfiShine className="shine-icon" size={"60"} />
         </div>
         <p>

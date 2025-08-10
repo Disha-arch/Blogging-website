@@ -39,6 +39,7 @@ const Login = () => {
       await createUserWithEmailAndPassword(auth, email, password);
       const user = userCredential.user;
       await updateProfile(user, { displayName: firstName });
+      console.log("profile updated:", user.displayName);
       localStorage.setItem("username", firstName);
       navigate("/Home");
     } catch (err) {
@@ -68,7 +69,11 @@ const Login = () => {
           <label className="first-name">First Name</label>
           <div>
             <FaUser />
-            <input type="text" placeholder="your first name"></input>
+            <input
+              type="text"
+              placeholder="your first name"
+              onChange={(e) => setFirstName(e.target.value)}
+            ></input>
           </div>
           <label className="first-name">Last Name</label>
           <div>
