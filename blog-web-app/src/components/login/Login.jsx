@@ -10,11 +10,13 @@ import {
   signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
   signInWithPopup,
+  updateProfile,
 } from "firebase/auth";
 
 const Login = () => {
   const navigate = useNavigate();
 
+  const [firstName, setFirstName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -35,6 +37,10 @@ const Login = () => {
   const handleSignIn = async () => {
     try {
       await createUserWithEmailAndPassword(auth, email, password);
+      const user = userCredential.user;
+      await updateProfile(user, { displayName: firstName });
+      localStorage.setItem("username", firstName);
+      navigate("/Home");
     } catch (err) {
       console.error(err);
     }
